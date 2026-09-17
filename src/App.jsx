@@ -1,0 +1,136 @@
+import React from 'react';
+
+export default function LandingPage() {
+  const handleDownloadClick = () => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'apk_download', {
+        app_name: 'YourPulse',
+        version: '1.0'
+      });
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+      {/* Navigation */}
+      <nav className="flex justify-between items-center p-6 max-w-6xl mx-auto">
+        <div className="flex items-center space-x-3">
+          {/* Your Custom Logo */}
+          <img 
+            src="/logo.svg" 
+            alt="YourPulse Logo" 
+            className="w-10 h-10 object-contain rounded-xl shadow-sm"
+          />
+          <span className="text-2xl font-extrabold tracking-tight text-slate-900">YourPulse</span>
+        </div>
+        <a 
+          href="#pricing" 
+          className="text-slate-600 hover:text-blue-600 font-semibold transition-colors"
+        >
+          Pricing
+        </a>
+      </nav>
+
+      {/* Hero Section */}
+      <header className="max-w-6xl mx-auto px-6 pt-16 pb-24 text-center md:pt-24 md:pb-32">
+        <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-4 block">
+          Smart POS & Inventory Manager
+        </span>
+        <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
+          Take Control of Your Shop's Sales, <br className="hidden md:block" /> 
+          Inventory, and Money in One Place.
+        </h1>
+        <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+          A smart POS system that tracks every Naira, manages multiple receiving bank accounts, and prevents stock theft—even offline. Built specifically for Nigerian businesses.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="/YourPulse-v1.0.apk"
+            download="YourPulse.apk"
+            onClick={handleDownloadClick}
+            className="w-full sm:w-auto bg-blue-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 text-lg"
+          >
+            Download for Android
+          </a>
+          <span className="text-sm text-slate-500 font-medium">
+            Requires Android 8.0 or later
+          </span>
+        </div>
+      </header>
+
+      {/* Features Grid with Animated Cards */}
+      <section className="bg-white py-20 border-y border-slate-200">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-100 cursor-default">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl mb-6 shadow-sm">
+                🔄
+              </div>
+              <h3 className="text-xl font-bold mb-3">Seamless Cloud Sync</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Start a sale on your phone and finish it on your laptop. Your database stays perfectly synced across all devices instantly.
+              </p>
+            </div>
+            
+            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-100 cursor-default">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl mb-6 shadow-sm">
+                🏦
+              </div>
+              <h3 className="text-xl font-bold mb-3">Multi-Bank Ready</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Easily route payments to different bank accounts. Keep your transfers organized without mixing up business and personal funds.
+              </p>
+            </div>
+            
+            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-100 cursor-default">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl mb-6 shadow-sm">
+                📦
+              </div>
+              <h3 className="text-xl font-bold mb-3">Bulk Inventory Import</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Upload your entire shop's stock in seconds using CSV or Excel files. Never type out hundreds of products manually again.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section with Animated Cards */}
+      <section id="pricing" className="py-24 max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-3xl font-extrabold mb-12">Simple, Transparent Pricing</h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          
+          {/* Monthly Plan */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-200">
+            <h3 className="text-xl font-bold text-slate-900 mb-2">Monthly</h3>
+            <div className="text-4xl font-extrabold text-blue-600 mb-6">₦999</div>
+            <p className="text-slate-600 mb-8 text-sm">Pay as you go, cancel anytime.</p>
+          </div>
+          
+          {/* 6 Months Plan (Most Popular) */}
+          <div className="bg-slate-900 border border-slate-900 rounded-2xl p-8 shadow-xl relative transition-all duration-300 transform md:-translate-y-4 hover:md:-translate-y-6 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-900/20">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-xs font-bold tracking-wide uppercase shadow-sm">
+              Most Popular
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">6 Months</h3>
+            <div className="text-4xl font-extrabold text-white mb-6">₦5,499</div>
+            <p className="text-slate-400 mb-8 text-sm">Save 10% by paying upfront.</p>
+          </div>
+
+          {/* Annual Plan */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-200">
+            <h3 className="text-xl font-bold text-slate-900 mb-2">Annually</h3>
+            <div className="text-4xl font-extrabold text-blue-600 mb-6">₦9,999</div>
+            <p className="text-slate-600 mb-8 text-sm">Save 16% for a full year of access.</p>
+          </div>
+        </div>
+      </section>
+      
+      {/* Footer */}
+      <footer className="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+        <p>© 2026 YourPulse. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
