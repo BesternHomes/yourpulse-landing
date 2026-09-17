@@ -59,8 +59,41 @@ export default function LandingPage() {
         </div>
       </header>
 
+      {/* Installation Guide */}
+      <section className="py-16 bg-blue-50 border-y border-blue-100">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-2xl font-bold text-center text-slate-900 mb-10">How to Install YourPulse in 3 Easy Steps</h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">1</div>
+              <h4 className="font-bold text-lg mb-2">Download the App</h4>
+              <p className="text-sm text-slate-600">Tap the blue download button above and wait for the file to finish saving to your phone.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">2</div>
+              <h4 className="font-bold text-lg mb-2">Open the File</h4>
+              <p className="text-sm text-slate-600">Tap <strong>"Open"</strong> on the download notification, or find the file in your phone's Downloads folder.</p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-sm">
+              <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">3</div>
+              <h4 className="font-bold text-lg mb-2">Allow Installation</h4>
+              <p className="text-sm text-slate-600">If your phone asks for permission, tap <strong>Settings</strong> and turn on <strong>"Allow from this source."</strong></p>
+            </div>
+          </div>
+          
+          <div className="mt-8 text-center">
+            <p className="text-sm text-slate-500 bg-white inline-block py-2 px-4 rounded-full border border-slate-200 shadow-sm">
+              💡 <strong>Pro Tip:</strong> Having trouble installing? We recommend using the free <a href="https://play.google.com/store/apps/details?id=com.apkmirror.helper.prod" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline font-semibold">APKMirror Installer</a> app from the Play Store.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Features Grid with Animated Cards */}
-      <section className="bg-white py-20 border-y border-slate-200">
+      <section className="bg-white py-20 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-100 cursor-default">
