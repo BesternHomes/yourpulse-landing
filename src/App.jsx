@@ -162,6 +162,37 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-extrabold text-center text-slate-900 mb-12">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+              <h4 className="text-lg font-bold text-slate-900 mb-3">Can I import my existing inventory from Excel?</h4>
+              <p className="text-slate-600 leading-relaxed">
+                Yes! Just make sure your Excel columns are named exactly: <strong>name, cost_price, selling_price,</strong> and <strong>stock_quantity</strong>. Remove any commas or Naira signs from the numbers, click <em>File &gt; Save As &gt; CSV</em>, and upload it directly into your dashboard.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+              <h4 className="text-lg font-bold text-slate-900 mb-3">Is there a guide on how to use the app?</h4>
+              <p className="text-slate-600 leading-relaxed">
+                YourPulse is designed to be incredibly intuitive. Once you download and open the app, you will find a quick-start guide right inside. If you ever get stuck, you can always reach out to our support team.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+              <h4 className="text-lg font-bold text-slate-900 mb-3">Does it work without an internet connection?</h4>
+              <p className="text-slate-600 leading-relaxed">
+                Absolutely. You can record daily sales and manage your shop offline. The moment your phone reconnects to the internet, YourPulse automatically syncs and backs up your database to the cloud.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
       
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-8 text-center text-sm">
