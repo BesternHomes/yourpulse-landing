@@ -177,9 +177,9 @@ export default function LandingPage() {
             </div>
 
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-              <h4 className="text-lg font-bold text-slate-900 mb-3">Is there a guide on how to use the app?</h4>
+              <h4 className="text-lg font-bold text-slate-900 mb-3">Can my sales staff use the app while I monitor from home?</h4>
               <p className="text-slate-600 leading-relaxed">
-                YourPulse is designed to be incredibly intuitive. Once you download and open the app, you will find a quick-start guide right inside. If you ever get stuck, you can always reach out to our support team.
+                Yes! Your staff can use the app at the shop to record daily sales, and you can log in from your own phone or laptop anywhere in the world to monitor cash flow and inventory levels in real-time.
               </p>
             </div>
 
