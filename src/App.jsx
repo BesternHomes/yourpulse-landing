@@ -1,5 +1,14 @@
 import React from 'react';
 
+// Explicitly declare gtag so React knows it exists globally
+// This is required for GA4 custom events in Vite/React
+if (typeof window !== 'undefined') {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
+}
+
 export default function LandingPage() {
   const handleDownloadClick = () => {
     if (typeof window !== 'undefined' && window.gtag) {
