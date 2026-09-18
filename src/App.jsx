@@ -2,11 +2,8 @@ import React from 'react';
 
 export default function LandingPage() {
   const handleDownloadClick = () => {
-    // Safely push to Google's data array without breaking the main GA script
-    if (typeof window !== 'undefined') {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'apk_download',
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'apk_download', {
         app_name: 'YourPulse',
         version: '1.0'
       });
