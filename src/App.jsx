@@ -31,7 +31,7 @@ export default function LandingPage() {
             Pricing
           </a>
           <a 
-            href="https://businesspulse.netlify.app/login" 
+            href="https://yourpulse.vercel.app" 
             className="text-blue-600 hover:text-blue-700 font-bold transition-colors"
           >
             Log In on Web
@@ -64,7 +64,7 @@ export default function LandingPage() {
               <span>📱</span> Download for Android
             </a>
             <a
-              href="https://businesspulse.netlify.app/login"
+              href="https://yourpulse.vercel.app"
               className="w-full sm:w-auto bg-white text-blue-600 border-2 border-blue-600 font-bold py-4 px-8 rounded-xl shadow-sm hover:bg-blue-50 hover:shadow-md transition-all duration-200 transform hover:-translate-y-1 text-lg flex items-center justify-center gap-2"
             >
               <span>💻</span> Open Web Dashboard
