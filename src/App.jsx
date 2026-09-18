@@ -23,12 +23,20 @@ export default function LandingPage() {
           />
           <span className="text-2xl font-extrabold tracking-tight text-slate-900">YourPulse</span>
         </div>
-        <a 
-          href="#pricing" 
-          className="text-slate-600 hover:text-blue-600 font-semibold transition-colors"
-        >
-          Pricing
-        </a>
+        <div className="flex items-center space-x-6">
+          <a 
+            href="#pricing" 
+            className="text-slate-600 hover:text-blue-600 font-semibold transition-colors hidden sm:block"
+          >
+            Pricing
+          </a>
+          <a 
+            href="https://businesspulse.netlify.app/login" 
+            className="text-blue-600 hover:text-blue-700 font-bold transition-colors"
+          >
+            Log In on Web
+          </a>
+        </div>
       </nav>
 
       {/* Hero Section */}
@@ -44,17 +52,26 @@ export default function LandingPage() {
           A smart POS system that tracks every Naira, manages multiple receiving bank accounts, and prevents stock theft—even offline. Built specifically for Nigerian businesses.
         </p>
         
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="/YourPulse-v1.0.apk"
-            download="YourPulse.apk"
-            onClick={handleDownloadClick}
-            className="w-full sm:w-auto bg-blue-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 text-lg"
-          >
-            Download for Android
-          </a>
-          <span className="text-sm text-slate-500 font-medium">
-            Requires Android 8.0 or later
+        {/* Dual CTA Section */}
+        <div className="flex flex-col items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-4">
+            <a
+              href="/YourPulse-v1.0.apk"
+              download="YourPulse.apk"
+              onClick={handleDownloadClick}
+              className="w-full sm:w-auto bg-blue-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 text-lg flex items-center justify-center gap-2"
+            >
+              <span>📱</span> Download for Android
+            </a>
+            <a
+              href="https://businesspulse.netlify.app/login"
+              className="w-full sm:w-auto bg-white text-blue-600 border-2 border-blue-600 font-bold py-4 px-8 rounded-xl shadow-sm hover:bg-blue-50 hover:shadow-md transition-all duration-200 transform hover:-translate-y-1 text-lg flex items-center justify-center gap-2"
+            >
+              <span>💻</span> Open Web Dashboard
+            </a>
+          </div>
+          <span className="text-sm text-slate-500 font-medium mt-2">
+            App requires Android 8.0+ • Web Dashboard works on any device
           </span>
         </div>
       </header>
@@ -125,7 +142,7 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-bold mb-3">Bulk Inventory Import</h3>
               <p className="text-slate-600 leading-relaxed">
-                Upload your entire shop's stock in seconds using CSV or Excel files. Never type out hundreds of products manually again.
+                Upload your entire shop's stock in seconds using CSV or Excel files from your web dashboard. Never type out hundreds of products manually again.
               </p>
             </div>
           </div>
@@ -172,7 +189,7 @@ export default function LandingPage() {
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
               <h4 className="text-lg font-bold text-slate-900 mb-3">Can I import my existing inventory from Excel?</h4>
               <p className="text-slate-600 leading-relaxed">
-                Yes! Just make sure your Excel columns are named exactly: <strong>name, cost_price, selling_price,</strong> and <strong>stock_quantity</strong>. Remove any commas or Naira signs from the numbers, click <em>File &gt; Save As &gt; CSV</em>, and upload it directly into your dashboard.
+                Yes! Just make sure your Excel columns are named exactly: <strong>name, cost_price, selling_price,</strong> and <strong>stock_quantity</strong>. Remove any commas or Naira signs from the numbers, click <em>File &gt; Save As &gt; CSV</em>, and upload it directly into your web dashboard.
               </p>
             </div>
 
@@ -186,7 +203,7 @@ export default function LandingPage() {
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
               <h4 className="text-lg font-bold text-slate-900 mb-3">Does it work without an internet connection?</h4>
               <p className="text-slate-600 leading-relaxed">
-                Absolutely. You can record daily sales and manage your shop offline. The moment your phone reconnects to the internet, YourPulse automatically syncs and backs up your database to the cloud.
+                Absolutely. You can record daily sales and manage your shop offline using the Android app. The moment your phone reconnects to the internet, YourPulse automatically syncs and backs up your database to the cloud.
               </p>
             </div>
 
