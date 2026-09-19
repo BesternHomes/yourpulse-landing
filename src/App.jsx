@@ -74,6 +74,20 @@ export default function LandingPage() {
             App requires Android 8.0+ • Web Dashboard works on any device
           </span>
         </div>
+
+        {/* YouTube Video Embed Section */}
+        <div className="mt-12 w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-gray-200">
+          <div className="relative pb-[56.25%] h-0">
+            <iframe 
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/rhq9W3Dg5Oo?si=YourPulsePromo" 
+              title="YourPulse POS Full Walkthrough" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen>
+            </iframe>
+          </div>
+        </div>
       </header>
 
       {/* Installation Guide */}
