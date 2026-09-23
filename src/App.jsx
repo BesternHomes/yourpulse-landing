@@ -12,15 +12,6 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
-      
-      {/* 🎉 NEW: Sticky 2-Month Free Announcement Banner */}
-      <div className="bg-indigo-600 px-4 py-3 text-white sm:flex sm:items-center sm:justify-center sm:px-6 lg:px-8 shadow-sm">
-        <p className="text-center text-sm font-medium sm:text-left">
-          🎉 Launch Special: Sign up today and get your first 
-          <span className="font-bold ml-1">2 MONTHS COMPLETELY FREE!</span>
-        </p>
-      </div>
-
       {/* Navigation */}
       <nav className="flex justify-between items-center p-6 max-w-6xl mx-auto">
         <div className="flex items-center space-x-3">
@@ -49,7 +40,17 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <header className="max-w-6xl mx-auto px-6 pt-12 pb-24 text-center md:pt-20 md:pb-32">
+      <header className="max-w-6xl mx-auto px-6 pt-10 pb-24 text-center md:pt-16 md:pb-32">
+        
+        {/* PREMIUM LAUNCH BADGE */}
+        <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow cursor-default text-sm font-bold text-slate-700">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+          </span>
+          Launch Special: 2 Months Completely Free
+        </div>
+
         <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-4 block">
           Smart POS & Inventory Manager
         </span>
@@ -61,8 +62,8 @@ export default function LandingPage() {
           A smart POS system that tracks every Naira, manages multiple receiving bank accounts, and prevents stock theft—even offline. Built specifically for Nigerian businesses.
         </p>
         
-        {/* Dual CTA Section - UPDATED WITH FREE TRIAL MESSAGING */}
-        <div className="flex flex-col items-center justify-center gap-4">
+        {/* Dual CTA Section */}
+        <div className="flex flex-col items-center justify-center gap-5">
           <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-4">
             <a
               href="/YourPulse-v1.0.apk"
@@ -70,7 +71,7 @@ export default function LandingPage() {
               onClick={handleDownloadClick}
               className="w-full sm:w-auto bg-blue-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 text-lg flex items-center justify-center gap-2"
             >
-              <span>📱</span> Start 2-Month Free Trial
+              <span>📱</span> Download for Android
             </a>
             <a
               href="https://yourpulse.vercel.app"
@@ -79,9 +80,18 @@ export default function LandingPage() {
               <span>💻</span> Open Web Dashboard
             </a>
           </div>
-          <span className="text-sm text-slate-500 font-medium mt-2">
-            App requires Android 8.0+ • Web Dashboard works on any device
-          </span>
+          
+          {/* Clean Trust Markers */}
+          <div className="flex flex-col items-center space-y-2">
+            <p className="text-sm font-bold text-slate-700 flex items-center gap-1.5 bg-white py-1 px-4 rounded-full border border-slate-200 shadow-sm">
+              <span className="text-emerald-500">✓</span> 60-Day Free Trial
+              <span className="text-slate-300 mx-2">|</span> 
+              <span className="text-emerald-500">✓</span> No Credit Card Required
+            </p>
+            <span className="text-xs text-slate-500 font-medium mt-2">
+              App requires Android 8.0+ • Web Dashboard works on any device
+            </span>
+          </div>
         </div>
 
         {/* YouTube Video Embed Section */}
@@ -172,11 +182,10 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Pricing Section - UPDATED TO SHOW FREE TRIAL */}
+      {/* Pricing Section with Animated Cards */}
       <section id="pricing" className="py-24 max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-extrabold mb-4">Simple, Transparent Pricing</h2>
         <p className="text-lg text-slate-600 mb-12">Every new account starts with <span className="font-bold text-blue-600">60 Days Completely Free</span>. No commitment.</p>
-        
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           
           {/* Monthly Plan */}
@@ -213,14 +222,14 @@ export default function LandingPage() {
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-extrabold text-center text-slate-900 mb-12">Frequently Asked Questions</h2>
           <div className="space-y-6">
-            
+
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
               <h4 className="text-lg font-bold text-slate-900 mb-3">Do I need a credit card for the 2-month free trial?</h4>
               <p className="text-slate-600 leading-relaxed">
                 No! You can download the app, create your account, and start using all features immediately without entering any payment details.
               </p>
             </div>
-
+            
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
               <h4 className="text-lg font-bold text-slate-900 mb-3">Can I import my existing inventory from Excel?</h4>
               <p className="text-slate-600 leading-relaxed">
