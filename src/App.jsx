@@ -42,18 +42,20 @@ export default function LandingPage() {
       {/* Hero Section */}
       <header className="max-w-6xl mx-auto px-6 pt-10 pb-24 text-center md:pt-16 md:pb-32">
         
-        {/* PREMIUM LAUNCH BADGE */}
-        <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow cursor-default text-sm font-bold text-slate-700">
-          <span className="relative flex h-2.5 w-2.5">
+        {/* PREMIUM LAUNCH BADGE - INCREASED SIZE & WEIGHT */}
+        <div className="inline-flex items-center justify-center gap-3 px-6 py-2 mb-8 rounded-full bg-white border border-slate-300 shadow-md hover:shadow-lg transition-shadow cursor-default text-base font-bold text-slate-800">
+          <span className="relative flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
           </span>
           Launch Special: 2 Months Completely Free
         </div>
 
-        <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-4 block">
+        {/* SUBTITLE - INCREASED SIZE */}
+        <span className="text-blue-600 font-extrabold tracking-widest uppercase text-base md:text-lg mb-4 block">
           Smart POS & Inventory Manager
         </span>
+        
         <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
           Take Control of Your Shop's Sales, <br className="hidden md:block" /> 
           Inventory, and Money in One Place.
