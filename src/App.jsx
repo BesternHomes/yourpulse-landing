@@ -12,6 +12,15 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
+      
+      {/* 🎉 NEW: Sticky 2-Month Free Announcement Banner */}
+      <div className="bg-indigo-600 px-4 py-3 text-white sm:flex sm:items-center sm:justify-center sm:px-6 lg:px-8 shadow-sm">
+        <p className="text-center text-sm font-medium sm:text-left">
+          🎉 Launch Special: Sign up today and get your first 
+          <span className="font-bold ml-1">2 MONTHS COMPLETELY FREE!</span>
+        </p>
+      </div>
+
       {/* Navigation */}
       <nav className="flex justify-between items-center p-6 max-w-6xl mx-auto">
         <div className="flex items-center space-x-3">
@@ -40,7 +49,7 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero Section */}
-      <header className="max-w-6xl mx-auto px-6 pt-16 pb-24 text-center md:pt-24 md:pb-32">
+      <header className="max-w-6xl mx-auto px-6 pt-12 pb-24 text-center md:pt-20 md:pb-32">
         <span className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-4 block">
           Smart POS & Inventory Manager
         </span>
@@ -52,7 +61,7 @@ export default function LandingPage() {
           A smart POS system that tracks every Naira, manages multiple receiving bank accounts, and prevents stock theft—even offline. Built specifically for Nigerian businesses.
         </p>
         
-        {/* Dual CTA Section */}
+        {/* Dual CTA Section - UPDATED WITH FREE TRIAL MESSAGING */}
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-4">
             <a
@@ -61,7 +70,7 @@ export default function LandingPage() {
               onClick={handleDownloadClick}
               className="w-full sm:w-auto bg-blue-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:bg-blue-700 hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 text-lg flex items-center justify-center gap-2"
             >
-              <span>📱</span> Download for Android
+              <span>📱</span> Start 2-Month Free Trial
             </a>
             <a
               href="https://yourpulse.vercel.app"
@@ -163,16 +172,21 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Pricing Section with Animated Cards */}
+      {/* Pricing Section - UPDATED TO SHOW FREE TRIAL */}
       <section id="pricing" className="py-24 max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-extrabold mb-12">Simple, Transparent Pricing</h2>
+        <h2 className="text-3xl font-extrabold mb-4">Simple, Transparent Pricing</h2>
+        <p className="text-lg text-slate-600 mb-12">Every new account starts with <span className="font-bold text-blue-600">60 Days Completely Free</span>. No commitment.</p>
+        
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           
           {/* Monthly Plan */}
           <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-200">
             <h3 className="text-xl font-bold text-slate-900 mb-2">Monthly</h3>
-            <div className="text-4xl font-extrabold text-blue-600 mb-6">₦999</div>
-            <p className="text-slate-600 mb-8 text-sm">Pay as you go, cancel anytime.</p>
+            <div className="flex items-center justify-center gap-2 mb-6">
+               <span className="text-2xl font-bold text-slate-400 line-through">₦999</span>
+               <span className="text-4xl font-extrabold text-blue-600">₦0</span>
+            </div>
+            <p className="text-slate-600 mb-8 text-sm">For your first two months. Then ₦999/mo.</p>
           </div>
           
           {/* 6 Months Plan (Most Popular) */}
@@ -182,14 +196,14 @@ export default function LandingPage() {
             </div>
             <h3 className="text-xl font-bold text-white mb-2">6 Months</h3>
             <div className="text-4xl font-extrabold text-white mb-6">₦5,499</div>
-            <p className="text-slate-400 mb-8 text-sm">Save 10% by paying upfront.</p>
+            <p className="text-slate-400 mb-8 text-sm">Billed after your 60-day free trial. Save 10%.</p>
           </div>
 
           {/* Annual Plan */}
           <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-200">
             <h3 className="text-xl font-bold text-slate-900 mb-2">Annually</h3>
             <div className="text-4xl font-extrabold text-blue-600 mb-6">₦9,999</div>
-            <p className="text-slate-600 mb-8 text-sm">Save 16% for a full year of access.</p>
+            <p className="text-slate-600 mb-8 text-sm">Billed after your 60-day free trial. Save 16%.</p>
           </div>
         </div>
       </section>
@@ -200,6 +214,13 @@ export default function LandingPage() {
           <h2 className="text-3xl font-extrabold text-center text-slate-900 mb-12">Frequently Asked Questions</h2>
           <div className="space-y-6">
             
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+              <h4 className="text-lg font-bold text-slate-900 mb-3">Do I need a credit card for the 2-month free trial?</h4>
+              <p className="text-slate-600 leading-relaxed">
+                No! You can download the app, create your account, and start using all features immediately without entering any payment details.
+              </p>
+            </div>
+
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1">
               <h4 className="text-lg font-bold text-slate-900 mb-3">Can I import my existing inventory from Excel?</h4>
               <p className="text-slate-600 leading-relaxed">
